@@ -10,14 +10,21 @@ public class User implements Serializable {
 	 */
 	private static final long serialVersionUID = 2638198608734351109L;
 	private String id;
-	private String name;
+	private String username;
 	private String account;
 	private String password;
-	private String nickName;
 	private String status;
 	private Date createTime;
 	private Date updateTime;
 	private String remarks;
+
+	public String getUsername() {
+		return username;
+	}
+
+	public void setUsername(String username) {
+		this.username = username;
+	}
 
 	public String getStatus() {
 		return status;
@@ -57,22 +64,6 @@ public class User implements Serializable {
 
 	public void setId(String id) {
 		this.id = id;
-	}
-
-	public String getNickName() {
-		return nickName;
-	}
-
-	public void setNickName(String nickName) {
-		this.nickName = nickName;
-	}
-	
-	public String getName() {
-		return name;
-	}
-
-	public void setName(String name) {
-		this.name = name;
 	}
 
 	public String getAccount() {

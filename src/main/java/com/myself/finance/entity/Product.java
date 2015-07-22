@@ -16,6 +16,70 @@ public class Product implements Serializable {
 	private Date updateTime;
 	private String remarks;
 	
+	private String userId;
+	private String title;
+	private String term;
+	private String level;
+	private String biddingType;
+	private long yearRate;
+	private long money;
+	private String repayment;
+	private String useDesc;
+	
+	public String getUserId() {
+		return userId;
+	}
+	public void setUserId(String userId) {
+		this.userId = userId;
+	}
+	public String getTitle() {
+		return title;
+	}
+	public void setTitle(String title) {
+		this.title = title;
+	}
+	public String getTerm() {
+		return term;
+	}
+	public void setTerm(String term) {
+		this.term = term;
+	}
+	public String getLevel() {
+		return level;
+	}
+	public void setLevel(String level) {
+		this.level = level;
+	}
+	public String getBiddingType() {
+		return biddingType;
+	}
+	public void setBiddingType(String biddingType) {
+		this.biddingType = biddingType;
+	}
+	public long getYearRate() {
+		return yearRate;
+	}
+	public void setYearRate(long yearRate) {
+		this.yearRate = yearRate;
+	}
+	public long getMoney() {
+		return money;
+	}
+	public void setMoney(long money) {
+		this.money = money;
+	}
+	public String getRepayment() {
+		return repayment;
+	}
+	public void setRepayment(String repayment) {
+		this.repayment = repayment;
+	}
+	public String getUseDesc() {
+		return useDesc;
+	}
+	public void setUseDesc(String useDesc) {
+		this.useDesc = useDesc;
+	}
 	public String getId() {
 		return id;
 	}

@@ -5,8 +5,10 @@ import com.myself.finance.param.UserParam;
 
 public interface UserService {
 
-	int save(User user);
-	User getUserByAccount(String account);
+	int save(User param);
+	int update(User param);
+	int delete(User param);
+	User getData(User param);
 	
 	void register(UserParam param);
 }

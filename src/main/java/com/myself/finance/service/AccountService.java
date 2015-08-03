@@ -1,6 +1,7 @@
 package com.myself.finance.service;
 
 import com.myself.finance.entity.Account;
+import com.myself.finance.param.AccountParam;
 
 public interface AccountService {
 
@@ -8,4 +9,7 @@ public interface AccountService {
 	void update(Account param);
 	void delete(Account param);
 	Account getData(Account param);
+	
+	void deposit(AccountParam param);
+	void withdraw(AccountParam param);
 }

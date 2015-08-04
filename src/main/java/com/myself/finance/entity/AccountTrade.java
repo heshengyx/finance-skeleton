@@ -3,7 +3,7 @@ package com.myself.finance.entity;
 import java.io.Serializable;
 import java.util.Date;
 
-public class AccountDetail implements Serializable {
+public class AccountTrade implements Serializable {
 
 	/**
 	 * 
@@ -18,7 +18,7 @@ public class AccountDetail implements Serializable {
 	private Date createTime;
 	private Date updateTime;
 	private String remarks;
-	private String accountId;
+	private String userId;
 	
 	public String getSource() {
 		return source;
@@ -26,11 +26,11 @@ public class AccountDetail implements Serializable {
 	public void setSource(String source) {
 		this.source = source;
 	}
-	public String getAccountId() {
-		return accountId;
+	public String getUserId() {
+		return userId;
 	}
-	public void setAccountId(String accountId) {
-		this.accountId = accountId;
+	public void setUserId(String userId) {
+		this.userId = userId;
 	}
 	public String getId() {
 		return id;

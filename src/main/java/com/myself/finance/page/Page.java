@@ -1,10 +1,15 @@
 package com.myself.finance.page;
 
+import java.io.Serializable;
 import java.util.HashMap;
 import java.util.List;
 import java.util.Map;
 
-public class Page<T> {
+public class Page<T> implements Serializable {
+	/**
+	 * 
+	 */
+	private static final long serialVersionUID = 4498776452637664843L;
 	private int page = 1; // 页码，默认是第一页
 	private int rows = 15; // 每页显示的记录数，默认是15
 	private int totalRecord; // 总记录数
@@ -12,6 +17,15 @@ public class Page<T> {
 	private T entity;
 	private List<T> results; // 对应的当前页记录
 	private Map<String, Object> params = new HashMap<String, Object>(); // 其他的参数我们把它分装成一个Map对象
+	private String name;
+
+	public String getName() {
+		return name;
+	}
+
+	public void setName(String name) {
+		this.name = name;
+	}
 
 	public T getEntity() {
 		return entity;

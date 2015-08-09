@@ -7,7 +7,7 @@ import com.myself.finance.page.IPage;
 import com.myself.finance.page.Page;
 import com.myself.finance.param.ProductQueryParam;
 
-public interface ProductService {
+public interface IProductService {
 
 	int save(Product param);
 	int update(Product param);

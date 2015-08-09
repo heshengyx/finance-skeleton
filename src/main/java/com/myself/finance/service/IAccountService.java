@@ -3,7 +3,7 @@ package com.myself.finance.service;
 import com.myself.finance.entity.Account;
 import com.myself.finance.param.AccountParam;
 
-public interface AccountService {
+public interface IAccountService {
 
 	void save(Account param);
 	void update(Account param);

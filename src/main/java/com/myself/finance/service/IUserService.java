@@ -5,7 +5,7 @@ import com.myself.finance.page.IPage;
 import com.myself.finance.param.UserParam;
 import com.myself.finance.param.UserQueryParam;
 
-public interface UserService {
+public interface IUserService {
 
 	int save(User param);
 	int update(User param);

@@ -6,7 +6,7 @@ import com.myself.finance.entity.AccountTrade;
 import com.myself.finance.page.Page;
 import com.myself.finance.param.AccountTradeQueryParam;
 
-public interface AccountTradeService {
+public interface IAccountTradeService {
 
 	void save(AccountTrade param);
 	void update(AccountTrade param);

@@ -6,7 +6,7 @@ import com.myself.finance.entity.Permission;
 import com.myself.finance.page.Page;
 import com.myself.finance.param.PermissionQueryParam;
 
-public interface PermissionService {
+public interface IPermissionService {
 
 	int save(Permission param);
 	int update(Permission param);

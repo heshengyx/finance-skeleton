@@ -3,7 +3,7 @@ package com.myself.finance.service;
 import java.util.List;
 
 import com.myself.finance.entity.Permission;
-import com.myself.finance.page.Page;
+import com.myself.finance.page.IPage;
 import com.myself.finance.param.PermissionQueryParam;
 
 public interface IPermissionService {
@@ -14,6 +14,6 @@ public interface IPermissionService {
 	Permission getData(Permission param);
 	
 	List<Permission> list(PermissionQueryParam param);
-	List<Permission> list(Page<PermissionQueryParam> param);
+	IPage<Permission> query(PermissionQueryParam param);
 	List<Permission> queryPermissionsByRoleId(String roleId);
 }

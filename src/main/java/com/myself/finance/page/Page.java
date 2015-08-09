@@ -1,88 +1,65 @@
 package com.myself.finance.page;
 
-import java.io.Serializable;
-import java.util.HashMap;
-import java.util.List;
-import java.util.Map;
+import java.util.ArrayList;
+import java.util.Collection;
 
-public class Page<T> implements Serializable {
+public class Page<T> implements IPage<T> {
+
 	/**
 	 * 
 	 */
-	private static final long serialVersionUID = 4498776452637664843L;
-	private int page = 1; // 页码，默认是第一页
-	private int rows = 15; // 每页显示的记录数，默认是15
-	private int totalRecord; // 总记录数
-	private int totalPage; // 总页数
-	private T entity;
-	private List<T> results; // 对应的当前页记录
-	private Map<String, Object> params = new HashMap<String, Object>(); // 其他的参数我们把它分装成一个Map对象
-	private String name;
+	private static final long serialVersionUID = -3711060001501201138L;
 
-	public String getName() {
-		return name;
-	}
+	// the record in page
+	private int size;
 
-	public void setName(String name) {
-		this.name = name;
-	}
+	// page index
+	private int index;
 
-	public T getEntity() {
-		return entity;
-	}
-	
-	public void setEntity(T entity) {
-		this.entity = entity;
-	}
-	
-	public int getPage() {
-		return page;
+	// the record total
+	private int total;
+
+	private int totalRecord;
+
+	private Collection<T> data;
+
+	public Page() {
 	}
 
-	public void setPage(int page) {
-		this.page = page;
+	public Page(Collection<T> data, int totalRecord, int index, int size) {
+		this.data = (data == null ? new ArrayList<T>(0) : data);
+		this.totalRecord = totalRecord;
+		this.size = size;
+		this.index = index;
+		this.total = (totalRecord - 1) / size + 1;
 	}
 
-	public int getRows() {
-		return rows;
-	}
-
-	public void setRows(int rows) {
-		this.rows = rows;
+	public void setTotalRecord(int totalRecord) {
+		this.totalRecord = totalRecord;
 	}
 
 	public int getTotalRecord() {
 		return totalRecord;
 	}
 
-	public void setTotalRecord(int totalRecord) {
-		this.totalRecord = totalRecord;
-		int totalPage = totalRecord % rows == 0 ? totalRecord / rows
-				: totalRecord / rows + 1;
-		this.setTotalPage(totalPage);
+	public void setTotal(int total) {
+		this.total = total;
 	}
 
-	public int getTotalPage() {
-		return totalPage;
+	public int getSize() {
+		return size;
 	}
 
-	public void setTotalPage(int totalPage) {
-		this.totalPage = totalPage;
+	public int getTotal() {
+		return total;
 	}
 
-	public List<T> getResults() {
-		return results;
+	public int getIndex() {
+		return index;
 	}
 
-	public void setResults(List<T> results) {
-		this.results = results;
+	public Collection<T> getData() {
+		return data;
 	}
 
-	public Map<String, Object> getParams() {
-		return params;
-	}
-
-	public void setParams(Map<String, Object> params) {
-		this.params = params;
-	}
 }

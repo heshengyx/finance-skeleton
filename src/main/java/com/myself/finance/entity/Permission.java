@@ -12,11 +12,20 @@ public class Permission implements Serializable {
 	private String id;
 	private String parentId;
 	private String name;
+	private String tag;
 	private String url;
 	private String status;
 	private Date createTime;
 	private Date updateTime;
 	private String remarks;
+
+	public String getTag() {
+		return tag;
+	}
+
+	public void setTag(String tag) {
+		this.tag = tag;
+	}
 
 	public String getParentId() {
 		return parentId;

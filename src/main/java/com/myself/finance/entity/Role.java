@@ -11,10 +11,19 @@ public class Role implements Serializable {
 	private static final long serialVersionUID = 6363561898222053906L;
 	private String id;
 	private String name;
+	private String tag;
 	private String status;
 	private Date createTime;
 	private Date updateTime;
 	private String remarks;
+
+	public String getTag() {
+		return tag;
+	}
+
+	public void setTag(String tag) {
+		this.tag = tag;
+	}
 
 	public String getStatus() {
 		return status;

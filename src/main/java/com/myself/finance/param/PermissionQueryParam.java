@@ -11,8 +11,15 @@ public class PermissionQueryParam extends QueryParam {
 	private String name;
 	private String status;
 	private Date createTime;
+	private String parentId;
 	private String roleId;
 	
+	public String getParentId() {
+		return parentId;
+	}
+	public void setParentId(String parentId) {
+		this.parentId = parentId;
+	}
 	public String getRoleId() {
 		return roleId;
 	}

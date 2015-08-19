@@ -16,9 +16,18 @@ public class User implements Serializable {
 	private String email;
 	private String phone;
 	private String status;
+	private String level;
 	private Date createTime;
 	private Date updateTime;
 	private String remarks;
+
+	public String getLevel() {
+		return level;
+	}
+
+	public void setLevel(String level) {
+		this.level = level;
+	}
 
 	public String getEmail() {
 		return email;

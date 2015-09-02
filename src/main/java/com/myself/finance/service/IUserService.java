@@ -11,6 +11,7 @@ public interface IUserService {
 	int update(User param);
 	int delete(User param);
 	User getData(User param);
+	User getDataByUsername(User param);
 	
 	void register(UserParam param);
 	IPage<User> query(UserQueryParam param);

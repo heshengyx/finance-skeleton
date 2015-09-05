@@ -15,9 +15,10 @@ public interface IPermissionService {
 	int delete(Permission param);
 	Permission getData(Permission param);
 	
-	List<Permission> list(PermissionQueryParam param);
 	IPage<Permission> query(PermissionQueryParam param);
+	List<Permission> list(PermissionQueryParam param);
 	List<Permission> queryPermissionsByRoleId(String roleId);
+	List<Permission> queryPermissions();
 	List<PermissionTreeData> tree(PermissionQueryParam param);
 	void saveRolePermissions(RolePermissionParam param);
 }

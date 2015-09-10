@@ -13,6 +13,6 @@ public interface IUserService {
 	User getData(User param);
 	User getDataByUsername(User param);
 	
-	void register(UserParam param);
+	void register(UserParam param, String captcha);
 	IPage<User> query(UserQueryParam param);
 }
